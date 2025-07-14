@@ -216,7 +216,72 @@ header a:hover {
 .footer-dropdown a:hover {
   background-color: rgba(255,255,255,0.1) !important;
 }
+/* ———————— Footer “header” look & feel ———————— */
 
+/* Make the footer a full-width bar like the header */
+.site-footer {
+  background-color: #0b233b;  /* same deep blue */
+  padding: 20px;              /* same vertical padding as header */
+}
+
+/* Turn the footer links into a flex nav, right-aligned on desktop */
+.site-footer .footer-nav {
+  display: flex;
+  justify-content: flex-end; /* push links to the right */
+  align-items: center;
+  flex-wrap: wrap;           /* wrap on very small screens */
+  margin: 0;                 /* remove default list margins */
+  padding: 0;                /* remove default list padding */
+  list-style: none;          /* hide bullets */
+}
+
+/* Space out each footer item exactly like the header’s nav */
+.site-footer .footer-nav .list-inline-item {
+  margin: 0 10px;
+}
+
+/* Match header link typography & hover style exactly */
+.site-footer .footer-nav a,
+.site-footer .footer-nav .dropdown-toggle {
+  color: #fff; 
+  font-weight: 500; 
+  text-decoration: none;
+  padding: 0;         /* header links don’t have extra padding */
+}
+
+/* Remove any background-on-hover flash */
+.site-footer .footer-nav a:hover,
+.site-footer .footer-nav a:focus {
+  color: #ddd;               /* light grey hover like header */
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* Style footer dropdown carets to match header’s white icon */
+.site-footer .footer-nav .dropdown-toggle .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  margin-left: 4px;          /* tighten it up */
+}
+
+/* Transparent dropdown panels that match header transparency */
+.site-footer .footer-dropdown {
+  background-color: rgba(11,35,59,0.7) !important; 
+  border: none;             
+  box-shadow: none;         
+}
+
+/* Mobile: stack nav items under the logo, centered */
+@media (max-width: 576px) {
+  .site-footer .footer-nav {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .site-footer .footer-nav .list-inline-item {
+    margin: 5px 0;
+  }
+}
 /* Responsive tweaks */
 @media (max-width: 576px) {
   .site-footer .footer-nav {
