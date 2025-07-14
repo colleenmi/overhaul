@@ -3,16 +3,23 @@
 /* General layout styles */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif !important;
   background-color: #f0f2f5;
 }
 
 /* Header styling */
 header {
-  background-color: #333;
+  background-color: #0b233b;
   color: white;
   padding: 20px;
   text-align: center;
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+  height: auto;
 }
 
 nav a {
@@ -25,20 +32,136 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0b233b;
+  padding: 10px 20px;
+  width: 100vw;
+}
+
+.navbar-toggler {
+  background-color: #0b233b !important;
+  border: none;
+  padding: 10px;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.dropdown-menu {
+  background-color: rgba(11, 35, 59, 0.7) !important;
+}
+
+.footer-dropdown {
+  background-color: #0b233b !important;
+}
+
+.dropdown-menu a {
+  font-weight: normal;
+}
+
+/* Team & Video Containers */
+.containerTeamArea {
+  display: flex;
+  background-color: #0b233b;
+  padding: 0;
+}
+
+.containerTeamArea div {
+  position: static;
+  width: 90%;
+  text-align: center;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.background-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.custom-text {
+  font-size: 50px;
+  color: white;
+}
+
+/* Typing Animation Container */
+.typing-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+  font-size: 4vw;
+  width: auto;
+}
+
+/* Animations & Keyframes */
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 24ch; }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+.fade-in {
+  animation: fadeIn ease 4s;
+  -webkit-animation: fadeIn ease 4s;
+  -moz-animation: fadeIn ease 4s;
+  -o-animation: fadeIn ease 4s;
+  -ms-animation: fadeIn ease 4s;
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+@-webkit-keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+@-o-keyframes fadeIn     { 0% { opacity: 0; } 100% { opacity: 1; } }
+@-ms-keyframes fadeIn    { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+/* ==========================================================================
+   Mobile Styles (only apply when viewport is 600px wide or smaller)
+   ========================================================================== */
+@media (max-width: 600px) {
+  .navbar-collapse {
+    flex-direction: column;
+    align-items: center;
+    background-color: #0b233b;
+  }
+
+  .nav-item {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
 /* Footer styling */
 footer {
-  background-color: #222;
+  background-color: #0b233b;
   color: #ccc;
   text-align: center;
   padding: 10px;
   font-size: 0.9em;
 }
 
-/* Container for main content */
-.container {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
