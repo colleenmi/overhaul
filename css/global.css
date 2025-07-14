@@ -249,6 +249,20 @@ header a:hover {
   text-decoration: underline;
 }
 
+.site-footer {
+  background-color: #0b233b !important;
+  color: #fff;
+}
+
+.footer-bottom {
+  background-color: #000 !important;
+}
+
+.copyright-bar {
+  background-color: #000 !important;
+  border: 2px solid lime;   /* remove this once you see it’s working */
+}
+
 /* — Responsive Stacking — */
 @media (max-width: 768px) {
   .site-footer .footer-content .footer-section {
