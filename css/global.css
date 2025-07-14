@@ -172,13 +172,62 @@ header a:hover {
 }
 
 
-/* Footer styling */
-footer {
+/* Footer base */
+.site-footer {
   background-color: #0b233b;
-  color: #ccc;
-  text-align: center;
-  padding: 10px;
-  font-size: 0.9em;
+  color: #fff;
+  padding: 20px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Logo sizing */
+.footer-logo {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Inline nav styling */
+.footer-nav a {
+  color: #fff;
+  padding: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Remove hover “flash” */
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: #ddd;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* Dropdown menus in footer */
+.footer-dropdown {
+  min-width: 150px;
+  background-color: #0b233b !important;
+  border: none;
+  box-shadow: none;
+}
+.footer-dropdown a {
+  color: #fff !important;
+  padding: 8px 12px;
+}
+.footer-dropdown a:hover {
+  background-color: rgba(255,255,255,0.1) !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .site-footer .footer-nav {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .site-footer .footer-nav .list-inline-item {
+    display: block;
+    margin: 5px 0;
+  }
 }
 
 /*  Remove default hover/focus styling on navbar links */
