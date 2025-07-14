@@ -379,3 +379,18 @@ body {
   color: #ddd !important;
   text-decoration: underline;
 }
+
+/* DEBUG: force all footer text to white */
+.site-footer,
+.site-footer *,
+
+.footer-bottom,
+.footer-bottom *,
+  
+copyright-bar,
+copyright-bar * {
+  color: #fff !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
