@@ -342,3 +342,11 @@ header a:hover {
   box-shadow: none;            /* Remove any focus ring/shadow */
   outline: none;               /* Remove default browser outline */
 }
+
+/* TEMP: highlight the copyright-bar so we can see it */
+.copyright-bar {
+  border: 2px solid lime;   /* bright border to confirm it’s present */
+  background-color: #000 !important;
+  color: #fff !important;
+  padding: 10px 0;
+}
