@@ -8,6 +8,10 @@ body {
   background-color: #f0f2f5;
 }
 
+main.container {
+  padding-top: 60px; /* Adjust this based on your header/nav height */
+}
+
 /* Header styling */
 header {
   background-color: #0b233b;
@@ -24,7 +28,7 @@ header img {
 }
 
 nav a {
-  color: white;
+  color: white !important;
   margin: 0 10px;
   text-decoration: none;
 }
@@ -64,6 +68,7 @@ nav a:hover {
 .dropdown-menu a {
   font-weight: normal;
 }
+
 
 /* Team & Video Containers */
 .containerTeamArea {
@@ -142,12 +147,12 @@ nav a:hover {
 /* ==========================================================================
    Mobile Styles (only apply when viewport is 600px wide or smaller)
    ========================================================================== */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .navbar-collapse {
     flex-direction: column;
     align-items: center;
     background-color: #0b233b;
-  }
+  } */
 
   .nav-item {
     display: block;
@@ -166,3 +171,12 @@ footer {
   font-size: 0.9em;
 }
 
+/*  Remove default hover/focus styling on navbar links */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: inherit;              /* Keep the same text color as normal */
+  background-color: transparent; /* No background change on hover */
+  background-image: none;      /* In case Bootstrap applies a gradient */
+  box-shadow: none;            /* Remove any focus ring/shadow */
+  outline: none;               /* Remove default browser outline */
+}
