@@ -271,6 +271,44 @@ header a:hover {
   box-shadow: none;         
 }
 
+/* ——— Existing footer styles above… ——— */
+
+/* Copyright Bar Styles */
+.copyright-bar {
+  background-color: #000;        /* black bar */
+  color: #fff;
+  padding: 10px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9em;
+}
+
+.copyright-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright-text,
+.made-with-love {
+  margin: 0;
+}
+
+/* Heart icon color */
+.made-with-love {
+  color: #fff;
+}
+
+/* Responsive stack on small screens */
+@media (max-width: 576px) {
+  .copyright-bar .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .made-with-love {
+    margin-top: 5px;
+  }
+}
+
 /* Mobile: stack nav items under the logo, centered */
 @media (max-width: 576px) {
   .site-footer .footer-nav {
