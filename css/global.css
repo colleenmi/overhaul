@@ -67,10 +67,6 @@ header a:hover {
   padding: 10px;
 }
 
-.navbar-toggler-icon {
-  filter: invert(1);
-}
-
 .dropdown-menu {
   background-color: rgba(11, 35, 59, 0.7) !important;
 }
