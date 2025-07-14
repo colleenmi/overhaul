@@ -176,7 +176,7 @@ header a:hover {
 .site-footer {
   font-family: 'Poppins', sans-serif;
   background-color: #0b233b;
-  color: #fff;
+  padding: 50px;
 }
 
 .site-footer .footer-content {
