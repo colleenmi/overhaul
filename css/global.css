@@ -359,3 +359,23 @@ body {
                                                                                                                                                                                                                                                                                                                                                                                                       color: #fff !important;
                                                                                                                                                                                                                                                                                                                                                                                                         padding: 10px 0;
                                                                                                                                                                                                                                                                                                                                                                                                         }
+                                                                                                                                                                                                                                                                              /* Ensure all footer text is white on the navy background */
+.site-footer,
+.site-footer h4,
+.site-footer p,
+.site-footer ul,
+.site-footer li {
+  color: #fff !important;
+}
+
+/* Specifically target footer links */
+.site-footer a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* Optional: subtle hover on footer links */
+.site-footer a:hover {
+  color: #ddd !important;
+  text-decoration: underline;
+}
