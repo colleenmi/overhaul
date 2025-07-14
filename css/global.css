@@ -8,8 +8,17 @@ body {
   background-color: #f0f2f5;
 }
 
-main.container {
-  padding-top: 60px; /* Adjust this based on your header/nav height */
+/* Page-specific content container */
+.page-content {
+  margin-top: 20px;      /* space from fixed header */
+  padding: 20px 0;       /* vertical padding (optional) */
+}
+
+/* Responsive tweak: less top-margin on small screens */
+@media (max-width: 600px) {
+  .page-content {
+    margin-top: 10px;
+  }
 }
 
 /* Header styling */
@@ -35,6 +44,11 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+}
+header a:hover {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;  /* Optional: keep underline from appearing */
 }
 
 /* Navbar Styles */
