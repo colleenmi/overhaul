@@ -169,6 +169,7 @@ header a:hover {
     width: 100%;
     text-align: center;
   }
+}
 
 
 /* Footer base */
@@ -270,12 +271,6 @@ header a:hover {
   box-shadow: none;         
 }
 
-.site-footer {
-  min-height: 200px;  /* ensures at least 200px tall */
-  display: flex;
-  align-items: center; /* vertically center its contents */
-}
-
 /* ——— Existing footer styles above… ——— */
 
 /* Copyright Bar Styles */
@@ -350,6 +345,7 @@ header a:hover {
 
 /* TEMP: highlight the copyright-bar so we can see it */
 .copyright-bar {
+  border: 2px solid black;   /* bright border to confirm it’s present */
   background-color: #000 !important;
   color: #fff !important;
   padding: 10px 0;
