@@ -293,40 +293,73 @@ header a:hover {
   -webkit-tap-highlight-color: transparent !important;
 }
 
-/* 1. Kill mobile tap highlight for nav links & dropdown items */
+/* Remove Bootstrap’s focus/hover/active background on navbar links */
 .navbar-default .navbar-nav > li > a,
-.navbar-default .navbar-nav .dropdown-toggle,
-.dropdown-menu > li > a {
+.navbar-inverse .navbar-nav > li > a {
+  background-color: transparent !important;
+}
+
+/* Specifically target focus, hover, active, and open states */
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .open > a {
+  background-color: transparent !important;
+  color: inherit !important;       /* preserve your text color */
+  outline: none !important;        /* remove the outline ring */
+  box-shadow: none !important;     /* remove any shadow */
+}
+
+/* Optional: Remove focus outline from all links */
+a:focus {
+  outline: none !important;
+}
+
+/* 1) Kill mobile tap highlight on nav links & dropdown items */
+.navbar-nav li > a,
+.navbar-nav li.open > a,
+.dropdown-menu li > a {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* 2. Base link/reset states */
+/* 2) Base reset for all top-level links & toggles */
 .navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-nav .dropdown-toggle {
   background: none !important;
+  background-image: none !important;
+  color: inherit !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: none !important;
+}
+
+/* 3) Neutralize hover, focus, active & open states on top-level */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:active,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav .open .dropdown-toggle {
+  background: none !important;
+  background-image: none !important;
   color: inherit !important;
   outline: none !important;
   box-shadow: none !important;
 }
 
-/* 3. Hover, focus, active on top-level links & toggles */
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus,
-.navbar-default .navbar-nav > li > a:active,
-.navbar-default .navbar-nav .dropdown-toggle:hover,
-.navbar-default .navbar-nav .dropdown-toggle:focus,
-.navbar-default .navbar-nav .open .dropdown-toggle {
-  background: none !important;
-  color: inherit !important;
-}
-
-/* 4. Dropdown menu items */
+/* 4) Strip out dropdown-menu container & its items */
 .dropdown-menu {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 }
-
 .dropdown-menu > li > a,
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus,
@@ -336,7 +369,7 @@ header a:hover {
   outline: none !important;
 }
 
-/* 5. (Optional) Remove the dotted outline on keyboard focus globally */
+/* 5) (Optional) Globally remove focus outline on all links */
 a:focus {
   outline: none !important;
 }
