@@ -265,3 +265,34 @@ header a:hover {
   box-shadow: none;            /* Remove any focus ring/shadow */
   outline: none;               /* Remove default browser outline */
 }
+
+/* Disable tap highlight on mobile WebKit browsers */
+* {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Remove Bootstrap’s focus/hover/active background on navbar links */
+.navbar-default .navbar-nav > li > a,
+.navbar-inverse .navbar-nav > li > a {
+  background-color: transparent !important;
+}
+
+/* Specifically target focus, hover, active, and open states */
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .open > a {
+  background-color: transparent !important;
+  color: inherit !important;       /* preserve your text color */
+  outline: none !important;        /* remove the outline ring */
+  box-shadow: none !important;     /* remove any shadow */
+}
+
+/* Optional: Remove focus outline from all links */
+a:focus {
+  outline: none !important;
+}
