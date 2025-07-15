@@ -169,66 +169,84 @@ header a:hover {
     width: 100%;
     text-align: center;
   }
-}
 
-
-/* Footer base */
+  /* Footer container */
 .site-footer {
-  background-color: #0b233b;
-  color: #fff;
-  padding: 20px 0;
-  font-family: 'Poppins', sans-serif;
+  background-color: #222;
+  color: #eee;
+  padding: 40px 0;
+  font-size: 0.9rem;
 }
 
 /* Logo sizing */
 .footer-logo {
-  max-width: 150px;
+  max-width: 140px;
   height: auto;
+  margin-bottom: 0.5rem;
 }
 
-/* Inline nav styling */
-.footer-nav a {
+/* Copyright text */
+.footer-copy {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* Nav list reset */
+.footer-nav {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+/* Inline list items */
+.footer-nav .list-inline-item {
+  margin: 0 0.5rem;
+}
+
+/* Links */
+.site-footer a {
+  color: #eee;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
   color: #fff;
-  padding: 0 10px;
-  text-decoration: none;
-  font-weight: 500;
+  text-decoration: underline;
 }
 
-/* Remove hover “flash” */
-.footer-nav a:hover,
-.footer-nav a:focus {
-  color: #ddd;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-/* Dropdown menus in footer */
+/* Dropdown menus */
 .footer-dropdown {
-  min-width: 150px;
-  background-color: #0b233b !important;
+  background-color: #333;
   border: none;
-  box-shadow: none;
+  padding: 0.5rem 0;
 }
-.footer-dropdown a {
-  color: #fff !important;
-  padding: 8px 12px;
+
+.footer-dropdown li a {
+  display: block;
+  padding: 0.4rem 1rem;
+  color: #ddd;
 }
-.footer-dropdown a:hover {
-  background-color: rgba(255,255,255,0.1) !important;
+
+.footer-dropdown li a:hover {
+  background-color: #444;
+  color: #fff;
 }
 
 /* Responsive tweaks */
-@media (max-width: 576px) {
-  .site-footer .footer-nav {
-    display: block;
+@media (max-width: 575.98px) {
+  .site-footer .row {
     text-align: center;
-    margin-top: 15px;
   }
-  .site-footer .footer-nav .list-inline-item {
-    display: block;
-    margin: 5px 0;
+
+  .site-footer .col-sm-4,
+  .site-footer .col-sm-8 {
+    width: 100%;
+    margin-bottom: 1.5rem;
   }
 }
+
+
+
 
 /*  Remove default hover/focus styling on navbar links */
 .navbar-default .navbar-nav > li > a:hover,
