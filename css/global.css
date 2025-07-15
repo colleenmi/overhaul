@@ -163,7 +163,10 @@ header a:hover {
     align-items: center;
     background-color: #0b233b;
   } */
-
+/* only the envelope icon in your footer */
+.site-footer .contact-list i.fa-envelope {
+  color: #fff;   /* swap in any hex/RGB you like */
+}
   .nav-item {
     display: block;
     width: 100%;
@@ -204,7 +207,7 @@ header a:hover {
 
 /* Column headers */
 .site-footer .footer-col h5 {
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: #fff;
