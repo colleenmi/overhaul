@@ -254,7 +254,29 @@ header a:hover {
   }
 }
 
+/* Black background, white text */
+.copyright-bar {
+  background-color: #000;  /* black background */
+  color: #fff;             /* white text */
+  padding: 10px 0;
+  clear: both;
+}
 
+/* Links match the white text */
+.copyright-bar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hover state: a subtle light gray */
+.copyright-bar a:hover {
+  color: #ccc;
+}
+
+/* (Optional) Thin separator above the bar */
+.copyright-bar {
+  border-top: 1px solid #444;
+}
 
 /*  Remove default hover/focus styling on navbar links */
 .navbar-default .navbar-nav > li > a:hover,
