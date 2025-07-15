@@ -163,6 +163,9 @@ header a:hover {
     align-items: center;
     background-color: #0b233b;
   } */
+   .site-footer {
+  border: 2px solid hotpink;
+}
 
   .nav-item {
     display: block;
