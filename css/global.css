@@ -4,393 +4,238 @@
 /* General layout styles */
 body {
   margin: 0;
-    font-family: 'Poppins', sans-serif !important;
-      background-color: #f0f2f5;
-      }
-
-      /* Page-specific content container */
-      .page-content {
-        margin-top: 20px;      /* space from fixed header */
-          padding: 20px 0;       /* vertical padding (optional) */
-          }
-
-          /* Responsive tweak: less top-margin on small screens */
-          @media (max-width: 600px) {
-            .page-content {
-                margin-top: 10px;
-                  }
-                  }
-
-                  /* Header styling */
-                  header {
-                    background-color: #0b233b;
-                      color: white;
-                        padding: 20px;
-                          text-align: center;
-                          }
-
-                          header img {
-                            display: block;
-                              margin: 0 auto;
-                                max-width: 150px;
-                                  height: auto;
-                                  }
-
-                                  nav a {
-                                    color: white !important;
-                                      margin: 0 10px;
-                                        text-decoration: none;
-                                        }
-
-                                        nav a:hover {
-                                          text-decoration: underline;
-                                          }
-                                          header a:hover {
-                                            color: inherit;
-                                              background-color: transparent;
-                                                text-decoration: none;  /* Optional: keep underline from appearing */
-                                                }
-
-                                                /* Navbar Styles */
-                                                .navbar {
-                                                  display: flex;
-                                                    align-items: center;
-                                                      justify-content: space-between;
-                                                        background-color: #0b233b;
-                                                          padding: 10px 20px;
-                                                            width: 100vw;
-                                                            }
-
-                                                            .navbar-toggler {
-                                                              background-color: #0b233b !important;
-                                                                border: none;
-                                                                  padding: 10px;
-                                                                  }
-
-                                                                  .dropdown-menu {
-                                                                    background-color: rgba(11, 35, 59, 0.7) !important;
-                                                                    }
-
-                                                                    .footer-dropdown {
-                                                                      background-color: #0b233b !important;
-                                                                      }
-
-                                                                      .dropdown-menu a {
-                                                                        font-weight: normal;
-                                                                        }
-
-
-                                                                        /* Team & Video Containers */
-                                                                        .containerTeamArea {
-                                                                          display: flex;
-                                                                            background-color: #0b233b;
-                                                                              padding: 0;
-                                                                              }
-
-                                                                              .containerTeamArea div {
-                                                                                position: static;
-                                                                                  width: 90%;
-                                                                                    text-align: center;
-                                                                                    }
-
-                                                                                    .video-container {
-                                                                                      position: relative;
-                                                                                        width: 100%;
-                                                                                          height: auto;
-                                                                                          }
-
-                                                                                          .background-video {
-                                                                                            width: 100%;
-                                                                                              height: auto;
-                                                                                                object-fit: cover;
-                                                                                                }
-
-                                                                                                .custom-text {
-                                                                                                  font-size: 50px;
-                                                                                                    color: white;
-                                                                                                    }
-
-                                                                                                    /* Typing Animation Container */
-                                                                                                    .typing-container {
-                                                                                                      position: absolute;
-                                                                                                        top: 50%;
-                                                                                                          left: 50%;
-                                                                                                            transform: translate(-50%, -50%);
-                                                                                                              color: white;
-                                                                                                                text-align: center;
-                                                                                                                  overflow: hidden;
-                                                                                                                    white-space: nowrap;
-                                                                                                                      border-right: 3px solid white;
-                                                                                                                        animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
-                                                                                                                          font-size: 4vw;
-                                                                                                                            width: auto;
-                                                                                                                            }
-
-                                                                                                                            /* Animations & Keyframes */
-                                                                                                                            @keyframes typing {
-                                                                                                                              from { width: 0; }
-                                                                                                                                to   { width: 24ch; }
-                                                                                                                                }
-
-                                                                                                                                @keyframes blink-caret {
-                                                                                                                                  50% { border-color: transparent; }
-                                                                                                                                  }
-
-                                                                                                                                  .fade-in {
-                                                                                                                                    animation: fadeIn ease 4s;
-                                                                                                                                      -webkit-animation: fadeIn ease 4s;
-                                                                                                                                        -moz-animation: fadeIn ease 4s;
-                                                                                                                                          -o-animation: fadeIn ease 4s;
-                                                                                                                                            -ms-animation: fadeIn ease 4s;
-                                                                                                                                            }
-
-                                                                                                                                            @keyframes fadeIn {
-                                                                                                                                              0%   { opacity: 0; }
-                                                                                                                                                100% { opacity: 1; }
-                                                                                                                                                }
-
-                                                                                                                                                @-moz-keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
-                                                                                                                                                @-webkit-keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
-                                                                                                                                                @-o-keyframes fadeIn     { 0% { opacity: 0; } 100% { opacity: 1; } }
-                                                                                                                                                @-ms-keyframes fadeIn    { 0% { opacity: 0; } 100% { opacity: 1; } }
-
-                                                                                                                                                /* ==========================================================================
-                                                                                                                                                   Mobile Styles (only apply when viewport is 600px wide or smaller)
-                                                                                                                                                      ========================================================================== */
-                                                                                                                                                      /* @media (max-width: 600px) {
-                                                                                                                                                        .navbar-collapse {
-                                                                                                                                                            flex-direction: column;
-                                                                                                                                                                align-items: center;
-                                                                                                                                                                    background-color: #0b233b;
-                                                                                                                                                                      } */
-
-                                                                                                                                                                        .nav-item {
-                                                                                                                                                                            display: block;
-                                                                                                                                                                                width: 100%;
-                                                                                                                                                                                    text-align: center;
-                                                                                                                                                                                      }
-                                                                                                                                                                                      }
-
-
-                                                                                                                                                                                      /* — Footer Top Multi-Column — */
-                                                                                                                                                                                      .site-footer {
-                                                                                                                                                                                        font-family: 'Poppins', sans-serif;
-                                                                                                                                                                                          background-color: #0b233b;
-                                                                                                                                                                                            padding: 50px;
-                                                                                                                                                                                            }
-
-                                                                                                                                                                                            .site-footer .footer-content {
-                                                                                                                                                                                              padding: 40px 0;
-                                                                                                                                                                                              }
-
-                                                                                                                                                                                              .site-footer .footer-section h4 {
-                                                                                                                                                                                                font-weight: 600;
-                                                                                                                                                                                                  margin-bottom: 15px;
-                                                                                                                                                                                                  }
-
-                                                                                                                                                                                                  .site-footer .footer-section ul {
-                                                                                                                                                                                                    padding: 0;
-                                                                                                                                                                                                      list-style: none;
-                                                                                                                                                                                                      }
-
-                                                                                                                                                                                                      .site-footer .footer-section ul li {
-                                                                                                                                                                                                        margin-bottom: 8px;
-                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                        .site-footer .footer-section a {
-                                                                                                                                                                                                          color: #fff;
-                                                                                                                                                                                                            text-decoration: none;
-                                                                                                                                                                                                            }
-
-                                                                                                                                                                                                            .site-footer .footer-section a:hover {
-                                                                                                                                                                                                              text-decoration: underline;
-                                                                                                                                                                                                              }
-
-                                                                                                                                                                                                              /* Social Icons */
-                                                                                                                                                                                                              .site-footer .social-icons a {
-                                                                                                                                                                                                                color: #fff;
-                                                                                                                                                                                                                  margin-right: 10px;
-                                                                                                                                                                                                                    font-size: 1.2em;
-                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                    .site-footer .social-icons a:last-child {
-                                                                                                                                                                                                                      margin-right: 0;
-                                                                                                                                                                                                                      }
-
-                                                                                                                                                                                                                      /* — Footer Bottom Bar — */
-                                                                                                                                                                                                                      .footer-bottom {
-                                                                                                                                                                                                                        background-color: #000;
-                                                                                                                                                                                                                          padding: 15px 0;
-                                                                                                                                                                                                                          }
-
-                                                                                                                                                                                                                          .footer-bottom .footer-copy {
-                                                                                                                                                                                                                            color: #ccc;
-                                                                                                                                                                                                                              margin: 0;
-                                                                                                                                                                                                                                font-size: 0.9em;
-                                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                .footer-bottom .footer-legal {
-                                                                                                                                                                                                                                  margin: 0;
-                                                                                                                                                                                                                                    padding: 0;
-                                                                                                                                                                                                                                      list-style: none;
-                                                                                                                                                                                                                                      }
-
-                                                                                                                                                                                                                                      .footer-bottom .footer-legal .list-inline-item {
-                                                                                                                                                                                                                                        margin: 0 10px;
-                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                        .footer-bottom .footer-legal a {
-                                                                                                                                                                                                                                          color: #fff;
-                                                                                                                                                                                                                                            font-size: 0.9em;
-                                                                                                                                                                                                                                              text-decoration: none;
-                                                                                                                                                                                                                                              }
-
-                                                                                                                                                                                                                                              .footer-bottom .footer-legal a:hover {
-                                                                                                                                                                                                                                                text-decoration: underline;
-                                                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                                .site-footer {
-                                                                                                                                                                                                                                                  background-color: #0b233b !important;
-                                                                                                                                                                                                                                                    color: #fff;
-                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                    .footer-bottom {
-                                                                                                                                                                                                                                                      background-color: #000 !important;
-                                                                                                                                                                                                                                                      }
-
-                                                                                                                                                                                                                                                      .copyright-bar {
-                                                                                                                                                                                                                                                        background-color: #000 !important;
-                                                                                                                                                                                                                                                          border: 2px solid lime;   /* remove this once you see it’s working */
-                                                                                                                                                                                                                                                          }
-
-                                                                                                                                                                                                                                                          /* — Responsive Stacking — */
-                                                                                                                                                                                                                                                          @media (max-width: 768px) {
-                                                                                                                                                                                                                                                            .site-footer .footer-content .footer-section {
-                                                                                                                                                                                                                                                                text-align: center;
-                                                                                                                                                                                                                                                                    margin-bottom: 30px;
-                                                                                                                                                                                                                                                                      }
-
-                                                                                                                                                                                                                                                                        .footer-bottom .container {
-                                                                                                                                                                                                                                                                            text-align: center;
-                                                                                                                                                                                                                                                                                display: block;
-                                                                                                                                                                                                                                                                                  }
-
-                                                                                                                                                                                                                                                                                    .footer-bottom .footer-legal {
-                                                                                                                                                                                                                                                                                        margin-top: 10px;
-                                                                                                                                                                                                                                                                                          }
-                                                                                                                                                                                                                                                                                          }
-
-                                                                                                                                                                                                                                                                                          /* ——— Existing footer styles above… ——— */
-
-                                                                                                                                                                                                                                                                                          /* Copyright Bar Styles */
-                                                                                                                                                                                                                                                                                          .copyright-bar {
-                                                                                                                                                                                                                                                                                            background-color: #000;        /* black bar */
-                                                                                                                                                                                                                                                                                              color: #fff;
-                                                                                                                                                                                                                                                                                                padding: 10px 0;
-                                                                                                                                                                                                                                                                                                  font-family: 'Poppins', sans-serif;
-                                                                                                                                                                                                                                                                                                    font-size: 0.9em;
-                                                                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                                                                    .copyright-bar .container {
-                                                                                                                                                                                                                                                                                                      display: flex;
-                                                                                                                                                                                                                                                                                                        justify-content: space-between;
-                                                                                                                                                                                                                                                                                                          align-items: center;
-                                                                                                                                                                                                                                                                                                          }
-
-                                                                                                                                                                                                                                                                                                          .copyright-text,
-                                                                                                                                                                                                                                                                                                          .made-with-love {
-                                                                                                                                                                                                                                                                                                            margin: 0;
-                                                                                                                                                                                                                                                                                                            }
-
-                                                                                                                                                                                                                                                                                                            /* Heart icon color */
-                                                                                                                                                                                                                                                                                                            .made-with-love {
-                                                                                                                                                                                                                                                                                                              color: #fff;
-                                                                                                                                                                                                                                                                                                              }
-
-                                                                                                                                                                                                                                                                                                              /* Responsive stack on small screens */
-                                                                                                                                                                                                                                                                                                              @media (max-width: 576px) {
-                                                                                                                                                                                                                                                                                                                .copyright-bar .container {
-                                                                                                                                                                                                                                                                                                                    flex-direction: column;
-                                                                                                                                                                                                                                                                                                                        text-align: center;
-                                                                                                                                                                                                                                                                                                                          }
-                                                                                                                                                                                                                                                                                                                            .made-with-love {
-                                                                                                                                                                                                                                                                                                                                margin-top: 5px;
-                                                                                                                                                                                                                                                                                                                                  }
-                                                                                                                                                                                                                                                                                                                                  }
-
-                                                                                                                                                                                                                                                                                                                                  /* Mobile: stack nav items under the logo, centered */
-                                                                                                                                                                                                                                                                                                                                  @media (max-width: 576px) {
-                                                                                                                                                                                                                                                                                                                                    .site-footer .footer-nav {
-                                                                                                                                                                                                                                                                                                                                        flex-direction: column;
-                                                                                                                                                                                                                                                                                                                                            text-align: center;
-                                                                                                                                                                                                                                                                                                                                                margin-top: 15px;
-                                                                                                                                                                                                                                                                                                                                                  }
-                                                                                                                                                                                                                                                                                                                                                    .site-footer .footer-nav .list-inline-item {
-                                                                                                                                                                                                                                                                                                                                                        margin: 5px 0;
-                                                                                                                                                                                                                                                                                                                                                          }
-                                                                                                                                                                                                                                                                                                                                                          }
-                                                                                                                                                                                                                                                                                                                                                          /* Responsive tweaks */
-                                                                                                                                                                                                                                                                                                                                                          @media (max-width: 576px) {
-                                                                                                                                                                                                                                                                                                                                                            .site-footer .footer-nav {
-                                                                                                                                                                                                                                                                                                                                                                display: block;
-                                                                                                                                                                                                                                                                                                                                                                    text-align: center;
-                                                                                                                                                                                                                                                                                                                                                                        margin-top: 15px;
-                                                                                                                                                                                                                                                                                                                                                                          }
-                                                                                                                                                                                                                                                                                                                                                                            .site-footer .footer-nav .list-inline-item {
-                                                                                                                                                                                                                                                                                                                                                                                display: block;
-                                                                                                                                                                                                                                                                                                                                                                                    margin: 5px 0;
-                                                                                                                                                                                                                                                                                                                                                                                      }
-                                                                                                                                                                                                                                                                                                                                                                                      }
-
-                                                                                                                                                                                                                                                                                                                                                                                      /*  Remove default hover/focus styling on navbar links */
-                                                                                                                                                                                                                                                                                                                                                                                      .navbar-default .navbar-nav > li > a:hover,
-                                                                                                                                                                                                                                                                                                                                                                                      .navbar-default .navbar-nav > li > a:focus {
-                                                                                                                                                                                                                                                                                                                                                                                        color: inherit;              /* Keep the same text color as normal */
-                                                                                                                                                                                                                                                                                                                                                                                          background-color: transparent; /* No background change on hover */
-                                                                                                                                                                                                                                                                                                                                                                                            background-image: none;      /* In case Bootstrap applies a gradient */
-                                                                                                                                                                                                                                                                                                                                                                                              box-shadow: none;            /* Remove any focus ring/shadow */
-                                                                                                                                                                                                                                                                                                                                                                                                outline: none;               /* Remove default browser outline */
-                                                                                                                                                                                                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                                                                                                                                                                                /* TEMP: highlight the copyright-bar so we can see it */
-                                                                                                                                                                                                                                                                                                                                                                                                .copyright-bar {
-                                                                                                                                                                                                                                                                                                                                                                                                  border: 2px solid black;   /* bright border to confirm it’s present */
-                                                                                                                                                                                                                                                                                                                                                                                                    background-color: #000 !important;
-                                                                                                                                                                                                                                                                                                                                                                                                      color: #fff !important;
-                                                                                                                                                                                                                                                                                                                                                                                                        padding: 10px 0;
-                                                                                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                              /* Ensure all footer text is white on the navy background */
-.site-footer,
-.site-footer h4,
-.site-footer p,
-.site-footer ul,
-.site-footer li {
-  color: #fff !important;
+  font-family: 'Poppins', sans-serif !important;
+  background-color: #f0f2f5;
 }
 
-/* Specifically target footer links */
-.site-footer a {
-  color: #fff !important;
+/* Page-specific content container */
+.page-content {
+  margin-top: 20px;      /* space from fixed header */
+  padding: 20px 0;       /* vertical padding (optional) */
+}
+
+/* Responsive tweak: less top-margin on small screens */
+@media (max-width: 600px) {
+  .page-content {
+    margin-top: 10px;
+  }
+}
+
+/* Header styling */
+header {
+  background-color: #0b233b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+  height: auto;
+}
+
+nav a {
+  color: white !important;
+  margin: 0 10px;
   text-decoration: none;
 }
 
-/* Optional: subtle hover on footer links */
-.site-footer a:hover {
-  color: #ddd !important;
+nav a:hover {
   text-decoration: underline;
 }
+header a:hover {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;  /* Optional: keep underline from appearing */
+}
 
-/* DEBUG: force all footer text to white */
-.site-footer,
-.site-footer *,
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0b233b;
+  padding: 10px 20px;
+  width: 100vw;
+}
 
-.footer-bottom,
-.footer-bottom *,
-  
-copyright-bar,
-copyright-bar * {
+.navbar-toggler {
+  background-color: #0b233b !important;
+  border: none;
+  padding: 10px;
+}
+
+.dropdown-menu {
+  background-color: rgba(11, 35, 59, 0.7) !important;
+}
+
+.footer-dropdown {
+  background-color: #0b233b !important;
+}
+
+.dropdown-menu a {
+  font-weight: normal;
+}
+
+
+/* Team & Video Containers */
+.containerTeamArea {
+  display: flex;
+  background-color: #0b233b;
+  padding: 0;
+}
+
+.containerTeamArea div {
+  position: static;
+  width: 90%;
+  text-align: center;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.background-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.custom-text {
+  font-size: 50px;
+  color: white;
+}
+
+/* Typing Animation Container */
+.typing-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+  font-size: 4vw;
+  width: auto;
+}
+
+/* Animations & Keyframes */
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 24ch; }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+.fade-in {
+  animation: fadeIn ease 4s;
+  -webkit-animation: fadeIn ease 4s;
+  -moz-animation: fadeIn ease 4s;
+  -o-animation: fadeIn ease 4s;
+  -ms-animation: fadeIn ease 4s;
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+@-webkit-keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+@-o-keyframes fadeIn     { 0% { opacity: 0; } 100% { opacity: 1; } }
+@-ms-keyframes fadeIn    { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+/* ==========================================================================
+   Mobile Styles (only apply when viewport is 600px wide or smaller)
+   ========================================================================== */
+/* @media (max-width: 600px) {
+  .navbar-collapse {
+    flex-direction: column;
+    align-items: center;
+    background-color: #0b233b;
+  } */
+
+  .nav-item {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* Footer base */
+.site-footer {
+  background-color: #0b233b;
+  color: #fff;
+  padding: 20px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Logo sizing */
+.footer-logo {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Inline nav styling */
+.footer-nav a {
+  color: #fff;
+  padding: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Remove hover “flash” */
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: #ddd;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* Dropdown menus in footer */
+.footer-dropdown {
+  min-width: 150px;
+  background-color: #0b233b !important;
+  border: none;
+  box-shadow: none;
+}
+.footer-dropdown a {
   color: #fff !important;
-  background: transparent !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+  padding: 8px 12px;
+}
+.footer-dropdown a:hover {
+  background-color: rgba(255,255,255,0.1) !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .site-footer .footer-nav {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .site-footer .footer-nav .list-inline-item {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+/*  Remove default hover/focus styling on navbar links */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: inherit;              /* Keep the same text color as normal */
+  background-color: transparent; /* No background change on hover */
+  background-image: none;      /* In case Bootstrap applies a gradient */
+  box-shadow: none;            /* Remove any focus ring/shadow */
+  outline: none;               /* Remove default browser outline */
 }
